@@ -7,7 +7,7 @@ let tecido
 let modelos = [];
 
 function exibirModelos () {
-    let listaDeModelos = document.querySelector('.ultimosPedidos');
+    listaDeModelos = document.querySelector('.ultimosPedidos');
 
     listaDeModelos = '';
 
@@ -20,6 +20,7 @@ function exibirModelos () {
         `;
         listaDeModelos.innerHTML = listaDeModelos.innerHTML + template;
     }
+    
 }
 
 pegarModeloEscolhido();
@@ -119,72 +120,5 @@ function resChegaram(res) {
     exibirModelos();
 }
 
-/*function res() {
-    console.log('pedido feito', res)
 
-    pegarModeloEscolhido()
-}*/
-
-
-
-
-
-//criar a lista vazia dos ultimos pedidos
-
-/*const dados = {
-    model: "t-shirt" | "top-tank" | "long",
-    neck: "v-neck" | "round" | "polo",
-    material: "silk" | "cotton" | "polyester",
-    image: string no formato de url,
-    owner: string,
-    author: string
-}*/
-
-
-
-/*const ul = document.querySelector
-function processarResposta(resposta) {
-    for (let i=0; i <= ultimosPedidos.length; i++) {
-        ul.innerHTML += `
-            <li>
-                <img src="${ultimosPedidos[i]}">
-                <p class="criador">${nomeUsuario}</p>
-            </li>
-            `
-    }
-}
-*/
-
-//fazer o requerimento para o modelo escolhido pelo usuario
-
-/* {
-	"model": "t-shirt" | "top-tank" | "long",
-	"neck": "v-neck" | "round" | "polo",
-	"material": "silk" | "cotton" | "polyester",
-	"image": string no formato de url,
-	"owner": string,
-	"author": string
-}
- */
-
-//adicionar o modelo escolhido na lista ultimosPedidos
-
-
-
-// definir a função que irá adicionar os pedidos que vier do navegador
-
-
-//exibir a lista atualizada dos ultimos pedidos feitos
-
-/*[
-	{
-		"id": number,
-		"model": string,
-		"neck": string,
-		"material": string,
-		"image": string,
-		"owner": string,
-		"author": string
-	}
-] */
 
