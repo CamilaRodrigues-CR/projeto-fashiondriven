@@ -28,6 +28,10 @@ header img {
     display: flex;
     justify-content: space-between;
 }
+.modeloClicado{
+    border: 3px solid #404EED;
+
+}
 .opcao1 {
  flex-direction: column;
  justify-content: center;
