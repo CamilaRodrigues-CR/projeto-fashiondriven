@@ -1,5 +1,9 @@
+/* *{
+    box-sizing: border-box;
+}*/
 body {
-    background-color: aqua;
+    background-color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
 }
 header {
     background-color: #404EED;
@@ -32,24 +36,11 @@ header img {
 .selecionado{
     width: 100px;
     height: 100px;
-    border: 3px solid #404EED;
-    border-radius: 50px;
+    border: 4.5px solid #404EED;
+    border-radius: 55px;
     margin: 10px;
 }
-.selecionado{
-    width: 100px;
-    height: 100px;
-    border: 3px solid #404EED;
-    border-radius: 50px;
-    margin: 10px;
-}
-.opcoes-tecido .fundoDaOpcao .Selecionado{
-    width: 100px;
-    height: 100px;
-    border: 3px solid #404EED;
-    border-radius: 50px;
-    margin: 10px;
-}
+
 .opcao1 {
  flex-direction: column;
  justify-content: center;
@@ -76,13 +67,15 @@ header img {
 .h3 {
     width: 143px;
     height: 21px;
-    margin:20px 0px 300px 45px;
+    font-size: 18px;
+    margin:20px 0px 40px 45px;
 }
 .fundoDaOpcao {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    background-color: #F2F2F2;
+    border: 0.5px solid #C4C4C4;
+    background-color: #E5E5E5;
     margin-bottom: 15px ;
 
     position: absolute;
@@ -97,7 +90,18 @@ header img {
 
 .imagemReferencia {
     width: 175px;
-    height: 21px;
+    height: 70px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.url {
+    width: 399px;
+    height: 40px;
+    background-color: #F2F2F2;
+
+    border-radius: 10px;
 }
 .confirmar {
     width: 399px;
@@ -106,6 +110,7 @@ header img {
     border: 0px solid #C4C4C4;
     color: #FCFCFC;
     background-color: #C4C4C4;
+    margin: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +129,47 @@ header img {
 .imagemLateral {
     background-color: #404EED;
 }
+h1 {
+    width: 174px;
+    height: 28px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #232323;
 
+    margin:30px 0 15px 118px;
+}
 
+ul {
+    width:1050px;
+    height:342px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: scroll;
+    margin: 0 175px 25px 118px;
+}
+li{
+    width: 201.69px;
+    height: 236.47px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+
+}
+li img {
+    width: auto;
+    height: 180px;
+    margin-top: 2px;
+}
+li p {
+    width: 130px;
+    height: 23px;
+    font: weight 400px;;
+    font-size: 20px;
+    line-height: 23.44px;
+    color: #232323;
+}
 /*border: 0.5px solid #C4C4C4;

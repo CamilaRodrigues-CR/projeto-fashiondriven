@@ -13,7 +13,7 @@ function exibirModelos () {
         let template = `
             <li>
                 <img src="${modelos[index].image}">
-                <p class="criador">${nomeUsuario}</p>
+                <p class="criador">Criador: ${modelos[index].owner}</p>
             </li>
         `;
         listaDeModelos.innerHTML = listaDeModelos.innerHTML + template;
@@ -40,7 +40,7 @@ function selecionarOpcao(elemento) {
             modelo =  "long";
             
         }
-        
+    }    
     if (elemento.parentNode.classList.contains("opcoes-gola")) {
         if (elemento.classList.contains("opcao1")) {
             gola = "v-neck";
@@ -54,7 +54,7 @@ function selecionarOpcao(elemento) {
             gola =  "polo";
             
         }
-        console.log(elemento)
+        
     } 
 
     if (elemento.parentNode.classList.contains("opcoes-tecido")) {
@@ -73,10 +73,12 @@ function selecionarOpcao(elemento) {
     } 
     
     
-    
+    console.log("modelo", modelo);
+    console.log("gola", gola);
+    console.log("tecido", tecido);
     //chamar a função de verifiacr o botão aqui!!!
 }
-}
+
 //verificar se o elemento esta com a classe selecionado aplicada
 //desmarcar essa classe ao clicar em outra opçao
 function modeloSelecionado(elemento){
@@ -133,6 +135,7 @@ function enviarPedido(){
 }
 
 function post(body) {
+    console.log(body);
     const promise = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', body);
     promise.then((res) => {
         console.log("Deu tudo certo");
@@ -163,15 +166,17 @@ function resChegaram(res) {
 }
 
 
-function validarBotaoConfirmarPedido (botao) {
-   //verificar se o modelo está vazio
+function validarBotaoConfirmarPedido () {
+    const input = document.querySelector('.url').value;
+    console.log(input);
+    //verificar se o modelo está vazio
     if (modelo !== undefined) {
      // verificar se a gola está vazia
         if (gola !== undefined){
     //verificar se o tecido está vazio
-             if (gola !== undefined){
+             if (tecido !== undefined){
     //verificar se a url está vazia
-                if (input !== undefined) {
+                if (input !== '') {
                     const confirmarBotao = document.querySelector('.confirmar');
 
                     confirmarBotao.classList.add('confirmarPedido');
@@ -179,6 +184,6 @@ function validarBotaoConfirmarPedido (botao) {
             }
         }
     }
-    console.log(botao)
+  
 }
 
