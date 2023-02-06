@@ -25,25 +25,43 @@ header img {
 }
 .opcoes-modelo{
     margin: 5px 0px;
+    height: 160px;
     display: flex;
     justify-content: space-between;
 }
-.modeloClicado{
+.selecionado{
+    width: 100px;
+    height: 100px;
     border: 3px solid #404EED;
-
+    border-radius: 50px;
+    margin: 10px;
+}
+.selecionado{
+    width: 100px;
+    height: 100px;
+    border: 3px solid #404EED;
+    border-radius: 50px;
+    margin: 10px;
+}
+.opcoes-tecido .fundoDaOpcao .Selecionado{
+    width: 100px;
+    height: 100px;
+    border: 3px solid #404EED;
+    border-radius: 50px;
+    margin: 10px;
 }
 .opcao1 {
  flex-direction: column;
  justify-content: center;
  align-items: center;
 }
-.opcoes-gola{
+.opcoes-gola {
     margin: 5px 0px;
     display: flex;
     justify-content: space-between;
 
 }
-.opcoes-tecido{
+.opcoes-tecido {
     margin: 5px 0px;
     display: flex;
     justify-content: space-between;
@@ -58,14 +76,13 @@ header img {
 .h3 {
     width: 143px;
     height: 21px;
-    margin:10px 0px 10px 45px;
+    margin:20px 0px 300px 45px;
 }
 .fundoDaOpcao {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     background-color: #F2F2F2;
-    border: 0.5px solid #C4C4C4;
     margin-bottom: 15px ;
 
     position: absolute;
@@ -82,21 +99,31 @@ header img {
     width: 175px;
     height: 21px;
 }
-.confirmarPedido {
+.confirmar {
     width: 399px;
     height: 40px;
     border-radius: 10px;
+    border: 0px solid #C4C4C4;
+    color: #FCFCFC;
     background-color: #C4C4C4;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-h2{
-    width: 155px;
-    height: 20px;
-    font-size: 20px;
+.confirmarPedido{
+    width: 399px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px solid #404EED;
     color: #FCFCFC;
+    background-color: #404EED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .imagemLateral {
     background-color: #404EED;
 }
+
+
+/*border: 0.5px solid #C4C4C4;

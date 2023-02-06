@@ -18,17 +18,17 @@
             <div class="modelo">
                 <h3>Escolha o modelo</h3>
                 <div class="opcoes-modelo">
-                    <div onclick="selecionarOpcao(this)" class="opcao1" >
-                        <div class="modeloClicado fundoDaOpcao"></div>
+                    <div onclick="selecionarOpcao(this) ; modeloSelecionado(this)" class="opcao1">
+                        <div class="fundoDaOpcao"></div>
                         <img src="imagens/tshirt.png">
                         <p> T-shirt</p>
-                    </div> 
-                    <div onclick="selecionarOpcao(this)" class="opcao2">
+                    </div>    
+                    <div onclick="selecionarOpcao(this) ; modeloSelecionado(this)" class="opcao2">
                         <div class="fundoDaOpcao"></div>
                         <img src="imagens/Camiseta.png">
                         <p> Camiseta </p>
                     </div> 
-                    <div onclick="selecionarOpcao(this)" class="opcao3">
+                    <div onclick="selecionarOpcao(this) ; modeloSelecionado(this)" class="opcao3">
                         <div class="fundoDaOpcao"></div>
                         <img src="imagens/Mangalonga.png">
                         <p> Manga Longa</p>
@@ -38,17 +38,19 @@
             <div class="gola">
                 <h3>Escolha a gola </h3>
                 <div class="opcoes-gola">
-                    <div onclick="selecionarOpcao(this)" class="opcao1">
+                    <div onclick="selecionarOpcao(this) ; golaSelecionada(this)" class="opcao1">
                         <div class="fundoDaOpcao"></div>
                         <img src="imagens/GolaV.png"> 
                         <p> Gola V</p>
+                        
                     </div>
-                    <div onclick="selecionarOpcao(this)" class="opcao2">
+                    <div onclick="selecionarOpcao(this) ; golaSelecionada(this)" class="opcao2">
                         <div class="fundoDaOpcao"></div>
                         <img src="imagens/GolaRedonda.png"> 
                         <p> Gola Redonda</p>
+                        
                     </div> 
-                    <div onclick="selecionarOpcao(this)" class="opcao3">
+                    <div onclick="selecionarOpcao(this) ; golaSelecionada(this)" class="opcao3">
                         <div class="fundoDaOpcao"></div>
                         <img src="imagens/GolaPolo.png"> 
                         <p> Gola Polo </p>
@@ -58,20 +60,20 @@
             <div class="tecido">
                 <h3>Escolha o tecido</h3>
                 <div class="opcoes-tecido">
-                    <div onclick="selecionarOpcao(this)" class="opcao1">
-                        <div class="fundoDaOpcao"></div>
-                        <img src="imagens/Seda.png">
-                        <p>Seda</p>
+                    <div onclick="selecionarOpcao(this) ; tecidoSelecionado(this)" class="opcao1">
+                            <div class="fundoDaOpcao"></div>
+                            <img src="imagens/Seda.png">
+                            <p>Seda</p>
                     </div> 
-                    <div onclick="selecionarOpcao(this)" class="opcao2">
+                    <div onclick="selecionarOpcao(this) ; tecidoSelecionado(this)" class="opcao2">
                         <div class="fundoDaOpcao"></div>
-                        <img src="imagens/Algodão.png">
-                        <p> Algodão </p>
+                            <img src="imagens/Algodão.png">
+                            <p> Algodão </p>
                     </div> 
-                    <div onclick="selecionarOpcao(this)" class="opcao3">
+                    <div onclick="selecionarOpcao(this) ; tecidoSelecionado(this)" class="opcao3">
                         <div class="fundoDaOpcao"></div>
-                        <img src="imagens/Poliester.png">
-                        <p> Poliester </p>
+                            <img src="imagens/Poliester.png">
+                            <p> Poliester </p>
                     </div>
                 </div>
             </div>
@@ -79,9 +81,9 @@
                 <h3>Imagem de referência</h3>
                 <input class="url">
             </div>
-            <div onclick="enviarPedido()" class="confirmarPedido">
-                <h2>Confirmar pedido</h2>
-            </div>
+            <button onclick="enviarPedido()" class="confirmar">
+                Confirmar pedido</button>
+            
         </div>
         <div class="imagemLateral">
             <img src="imagens/ilustração.png">
@@ -90,9 +92,9 @@
     
     <footer>
         <h1>Ultimos pedidos</h1>
-        <div class="ultimosPedidos">
+        <ul class="ultimosPedidos">
             
-        </div>
+        </ul>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
