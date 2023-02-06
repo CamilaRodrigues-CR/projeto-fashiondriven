@@ -11,7 +11,7 @@ function exibirModelos () {
     
     for (let index = 0; index < modelos.length; index++) {
         let template = `
-            <li>
+            <li onclick="escolherEsseModelo(${index})">
                 <img src="${modelos[index].image}">
                 <p class="criador">Criador: ${modelos[index].owner}</p>
             </li>
@@ -123,7 +123,7 @@ function enviarPedido(){
     const urlDaImagem = input.value;
     console.log (input)
 
-    const body = {
+    let body = {
         model: modelo,
         neck: gola,
         material: tecido,
@@ -135,17 +135,18 @@ function enviarPedido(){
 }
 
 function post(body) {
-    console.log(body);
     const promise = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', body);
     promise.then((res) => {
+        alert("Pedido efetuado com sucesso!")
         console.log("Deu tudo certo");
     });
     promise.catch((err) => {
-        alert("Ops, algo deu errado. Tente novamente")
+        alert("Ops, não conseguimos processar sua encomenda")
         console.log("deu erro", err);
     });
 
     pegarModeloEscolhido()
+    exibirModelos();
 }
 
 function pegarModeloEscolhido() {
@@ -155,11 +156,12 @@ function pegarModeloEscolhido() {
     promise.catch((err) => {
         alert("Ocorreu um erro inesperado no servidor!")
         console.log("Erro ao receber os modelos", err)
-    });    
+    }); 
+       
 }
 
 function resChegaram(res) {
-    console.log ("modelos chegaram", res.data);
+    
     modelos = res.data;
 
     exibirModelos();
@@ -187,3 +189,35 @@ function validarBotaoConfirmarPedido () {
   
 }
 
+function escolherEsseModelo(escolhido) {
+        confirm("Confirmar modelo escolhido?");
+        //preencher os dados do body
+        console.log(escolhido);
+        console.log(modelos[escolhido]);
+        /* os dados chegam da seguinte forma:
+        id:
+        image: ""
+        material: 
+        model: 
+        neck: 
+        owner: 
+        
+        é preciso acrescentar nesse objeto o author
+        */
+        author = nomeUsuario;
+        dados =  modelos[escolhido] + author
+        //mandar uma requisição com o modelo clicado
+        const promise = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', dados);
+        promise.then((res) => {
+            alert("Pedido efetuado com sucesso!")
+            console.log("Deu tudo certo");
+        });
+        promise.catch((err) => {
+            alert("Ops, não conseguimos processar sua encomenda")
+            console.log("deu erro", err);
+        });
+        
+        
+      
+        
+}
